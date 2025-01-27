@@ -105,10 +105,10 @@
         input.addEventListener('input', () => {
             const text = input.value;
             const formattedText = text
-                .replace(/,(?!\d)/g, '，\n') // 替换英文逗号为中文逗号加换行，排除数字中的逗号
-                .replace(/，(?!\d)/g, '，\n') // 替换中文逗号加换行，排除数字中的逗号
-                .replace(/\.(?!\d)/g, '。\n') // 替换英文句号为中文句号加换行，排除数字中的句号
-                .replace(/。(?!\d)/g, '。\n'); // 替换中文句号加换行，排除数字中的句号
+                .replace(/,(?!\d)/g,  ' \n') // 替换英文逗号为中文逗号加换行，排除数字中的逗号
+                .replace(/，(?!\d)/g, ' \n') // 替换中文逗号加换行，排除数字中的逗号
+                .replace(/\.(?!\d)/g, ' \n') // 替换英文句号为中文句号加换行，排除数字中的句号
+                .replace(/。(?!\d)/g, ' \n'); // 替换中文句号加换行，排除数字中的句号
             output.textContent = formattedText;
         });
 
